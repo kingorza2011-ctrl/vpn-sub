@@ -70,8 +70,8 @@ def main():
         f.write(encoded)
     print(f"configs.txt yazildi ({len(encoded)} byte)")
 
-    # 500'er sunucuya bol (statically icin)
-    chunk_size = 500
+    # 5000'er sunucuya bol (statically icin)
+    chunk_size = 5000
     chunks = [all_configs[i:i+chunk_size] for i in range(0, len(all_configs), chunk_size)]
     for idx, chunk in enumerate(chunks):
         combined_chunk = "\n".join(chunk)
